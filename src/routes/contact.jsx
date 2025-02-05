@@ -1,4 +1,5 @@
 import { Form } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Contact() {
   const contact = {
@@ -90,3 +91,9 @@ function Favorite({ contact }) {
     </Form>
   );
 }
+
+Favorite.propTypes = {
+  contact: PropTypes.shape({
+    favorite: PropTypes.bool.isRequired,
+  }).isRequired
+};
